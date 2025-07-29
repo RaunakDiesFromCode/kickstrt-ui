@@ -1,3 +1,5 @@
+# BETA: I will update it on a daly basis
+
 # Kickstrt UI
 
 A lightweight, developer-first React + TypeScript component library built with Vite. Kickstrt UI offers a fast, no-bloat set of reusable UI primitives and dev-friendly component showcases for rapid prototyping and production-ready interfaces.
