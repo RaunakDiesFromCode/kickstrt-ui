@@ -2,9 +2,11 @@ import { useEffect } from "react";
 import Hero from "./components/website/Hero";
 import ReactGA from "react-ga4";
 
+const googleAnalID = import.meta.env.VITE_GOOGLE_ANAL;
+
 const App = () => {
     useEffect(() => {
-        ReactGA.initialize("G-57ES9Y5GPE");
+        ReactGA.initialize(googleAnalID);
 
         ReactGA.send({
             hitType: "pageview",
