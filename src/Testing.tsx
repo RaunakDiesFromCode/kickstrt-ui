@@ -18,7 +18,7 @@ import { SkeletonShowcase } from "./components/dev/SkeletonShowcase";
 import { SonnerShowcase } from "./components/dev/SonnerShowcase";
 import { TextareaShowcase } from "./components/dev/TextAreaShowcase";
 import { ToggleShowcase } from "./components/dev/ToggleShowcase";
-import { TooltipShowcase } from "./components/dev/TooltipShowcase";
+import { TooltipShowcase } from "./components/dev/dTooltipShowcase";
 import { CardShowcase } from "./components/dev/CardShowcase";
 
 const Testing = () => {

@@ -1,5 +1,5 @@
 import { Button } from "../UI/Button";
-import { Tooltip, TooltipContent, TooltipTrigger } from "../UI/Tooltip";
+import { Tooltip, TooltipContent, TooltipTrigger } from "../UI/dTooltip";
 
 export function TooltipShowcase() {
     return (

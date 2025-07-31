@@ -9,12 +9,24 @@ import {
     CardContent,
     CardFooter,
     CardHeader,
- } from "@/components/UI/Card";
+} from "@/components/UI/Card";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/UI/Avatar";
-import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/UI/Tooltip";
+import {
+    Tooltip,
+    TooltipContent,
+    TooltipProvider,
+    TooltipTrigger,
+} from "@/components/UI/dTooltip";
 import { Button } from "@/components/UI/Button";
 import { Input } from "@/components/UI/Input";
-import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle } from "@/components/UI/Dialog";
+import {
+    Dialog,
+    DialogContent,
+    DialogDescription,
+    DialogFooter,
+    DialogHeader,
+    DialogTitle,
+} from "@/components/UI/Dialog";
 import {
     Command,
     CommandEmpty,
@@ -22,9 +34,7 @@ import {
     CommandInput,
     CommandItem,
     CommandList,
- } from "@/components/UI/Command";
-
-
+} from "@/components/UI/Command";
 
 const users = [
     {
