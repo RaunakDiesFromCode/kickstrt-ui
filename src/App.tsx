@@ -1,6 +1,5 @@
 import React from "react";
 import ButtonShowcase from "./components/dev/ButtonShowcase";
-import { ModeToggle } from "./components/mode-toggle";
 import AccordionShowcase from "./components/dev/AccordionShowcase";
 import { AlertDemonstration } from "./components/dev/AlertShowcase";
 import { AlertDialogShowcase } from "./components/dev/AlertDialogueShowcase";
@@ -20,12 +19,14 @@ import { SkeletonShowcase } from "./components/dev/SkeletonShowcase";
 import { SonnerShowcase } from "./components/dev/SonnerShowcase";
 import { TextareaShowcase } from "./components/dev/TextAreaShowcase";
 import { ToggleShowcase } from "./components/dev/ToggleShowcase";
+import { ThemeToggle } from "./components/UI/ThemeToggle";
+import { TooltipShowcase } from "./components/dev/ToolTipShowcase";
 
 const App = () => {
     return (
         <main className="p-10 max-w-[50%]">
             <div className="fixed top-0 z-50 m-4">
-                <ModeToggle />
+                <ThemeToggle />
             </div>
             <ButtonShowcase />
             <AccordionShowcase />
@@ -47,6 +48,7 @@ const App = () => {
             <SonnerShowcase />
             <TextareaShowcase />
             <ToggleShowcase />
+            <TooltipShowcase />
             {/* Add more components as needed */}
             <div className="h-[200vh]"></div>
         </main>
