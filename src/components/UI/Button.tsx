@@ -16,9 +16,9 @@ const buttonVariants = cva(`${baseStyles} kickstrt-effects`, {
             destructive:
                 "bg-destructive/80 hover:bg-destructive text-destructive-foreground/90 hover:text-destructive-foreground ",
             outline:
-                "border border-input bg-background hover:bg-accent dark:bg-input/30 dark:border-input dark:hover:bg-input/50",
+                "border border-input bg-background hover:bg-accent",
             secondary: "bg-secondary/80 hover:bg-secondary",
-            ghost: "hover:bg-accent dark:hover:bg-accent/50 shadow-none",
+            ghost: "hover:bg-accent shadow-none",
             link: "underline-offset-4 hover:underline bg-transparent border-none shadow-none cursor-pointer",
         },
         size: {

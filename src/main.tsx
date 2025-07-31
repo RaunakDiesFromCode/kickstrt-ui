@@ -4,13 +4,17 @@ import "./index.css";
 import App from "./App.tsx";
 import { ThemeProvider } from "./components/theme-provider.tsx";
 import { Toaster } from "./components/UI/Sonner.tsx";
+import Navbar from "./components/website/Navbar.tsx";
+import { Footer } from "./components/website/footer.tsx";
 
 createRoot(document.getElementById("root")!).render(
     <StrictMode>
         <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
-            <div className=" bg-background">
+            <main>
+                <Navbar />
                 <App />
-            </div>
+                <Footer/>
+            </main>
             <Toaster />
         </ThemeProvider>
     </StrictMode>
