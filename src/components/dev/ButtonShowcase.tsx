@@ -3,7 +3,7 @@
 import React from "react";
 import { Button } from "../UI/Button";
 import { Bell, Sun } from "lucide-react";
-import { cn } from "../../lib/utils";
+import { cn } from "@/lib/utils";
 
 const variants = [
     "default",

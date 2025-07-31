@@ -18,7 +18,7 @@ export function ContextMenuShowcase() {
     return (
         <div className="p-6 space-y-4">
             <h2 className="text-xl font-bold text-foreground mb-4">
-                Calendar Showcase
+                Context Menu Showcase
             </h2>
             <ContextMenu>
                 <ContextMenuTrigger className="flex h-[150px] w-[300px] items-center justify-center rounded-md border border-input text-accent-foreground text-sm">
