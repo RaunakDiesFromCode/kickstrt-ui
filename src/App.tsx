@@ -20,7 +20,7 @@ import { SonnerShowcase } from "./components/dev/SonnerShowcase";
 import { TextareaShowcase } from "./components/dev/TextAreaShowcase";
 import { ToggleShowcase } from "./components/dev/ToggleShowcase";
 import { ThemeToggle } from "./components/UI/ThemeToggle";
-import { TooltipShowcase } from "./components/dev/ToolTipShowcase";
+import { TooltipShowcase } from "./components/dev/TooltipShowcase";
 
 const App = () => {
     return (
