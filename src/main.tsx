@@ -5,7 +5,7 @@ import App from "./App.tsx";
 import { ThemeProvider } from "./components/theme-provider.tsx";
 import { Toaster } from "./components/UI/Sonner.tsx";
 import Navbar from "./components/website/Navbar.tsx";
-import { Footer } from "./components/website/footer.tsx";
+import { Footer } from "./components/website/Footer.tsx";
 
 createRoot(document.getElementById("root")!).render(
     <StrictMode>

@@ -1,4 +1,3 @@
-import React from "react";
 import ButtonShowcase from "./components/dev/ButtonShowcase";
 import AccordionShowcase from "./components/dev/AccordionShowcase";
 import { AlertDemonstration } from "./components/dev/AlertShowcase";

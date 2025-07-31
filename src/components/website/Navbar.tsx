@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { ThemeToggle } from "../UI/ThemeToggle";
 import { Button } from "../UI/Button";
 import { Github } from "lucide-react";

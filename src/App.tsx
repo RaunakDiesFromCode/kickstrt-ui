@@ -1,6 +1,4 @@
-import React from "react";
 import Hero from "./components/website/Hero";
-import Testing from "./Testing";
 
 const App = () => {
     return (

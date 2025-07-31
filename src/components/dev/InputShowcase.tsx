@@ -1,6 +1,5 @@
 "use client";
 
-import * as React from "react";
 import { Input } from "../UI/Input";
 import { Label } from "../UI/Label";
 

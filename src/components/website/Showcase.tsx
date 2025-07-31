@@ -1,4 +1,3 @@
-import React from "react";
 import { CardShowcase } from "../dev/CardShowcase";
 import { CalendarShowcase } from "../dev/CalendarShowcase";
 import { CardsShare } from "./samples/share";
