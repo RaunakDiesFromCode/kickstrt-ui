@@ -11,10 +11,17 @@ main {
   @apply bg-background min-h-screen;
 }
 
+h2,
+h3 {
+  scroll-margin-top: 100px;
+  /* adjust to your navbar height */
+}
+
 html,
 body {
   overscroll-behavior: none;
   touch-action: none;
+  scroll-behavior: smooth;
   /* optional: disables touch gestures */
 }
 

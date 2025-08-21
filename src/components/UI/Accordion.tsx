@@ -20,7 +20,7 @@ function AccordionItem({
             data-slot="accordion-item"
             className={cn(
                 "kickstrt-effects",
-                "border-b last:border-b-0 shadow-none px-6 rounded-none border-input",
+                "border-b last:border-b-0 shadow-none px-6 border-input",
                 className
             )}
             {...props}

@@ -1,10 +1,12 @@
 import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from "../../UI/Accordion";
+import DocsLayout from "./DocsLayout";
 
----
-title: Introduction
-description: shadcn/ui is a set of beautifully-designed, accessible components and a code distribution platform. Works with your favorite frameworks and AI models. Open Source. Open Code.
----
+export const meta = {
+  title: "Introduction",
+  description: "shadcn/ui is a set of beautifully-designed, accessible components and a code distribution platform. Works with your favorite frameworks and AI models. Open Source. Open Code.",
+};
 
+<DocsLayout title={meta.title} description={meta.description}>
 **This is not a component library. It is how you build your component library.**
 
 You know how most traditional component libraries work: you install a package from NPM, import the components, and use them in your app.
@@ -78,4 +80,4 @@ The design of shadcn/ui makes it easy for AI tools to work with your code. Its o
 
 _An AI model can learn how your components work and suggest improvements or even create new components that integrate with your existing design._
 
-
+</DocsLayout>
