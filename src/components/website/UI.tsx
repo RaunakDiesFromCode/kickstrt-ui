@@ -8,6 +8,7 @@ import {
     CardTitle,
     CardDescription,
 } from "../UI/Card";
+import { Separator } from "../UI/Seperator";
 
 const description = (
     <>
@@ -89,7 +90,7 @@ const UI = () => {
                 {features.map((f, idx) => (
                     <Card
                         key={idx}
-                        className="hover:shadow-lg transition flex flex-col items-center text-center p-6"
+                        className="hover:shadow-lg transition flex flex-col items-center text-center"
                     >
                         <div className="flex flex-col items-center gap-y-3">
                             <div className="p-3 rounded-full bg-teal-50 dark:bg-teal-900/30">
@@ -98,7 +99,8 @@ const UI = () => {
                             <CardTitle className="text-lg font-semibold">
                                 {f.title}
                             </CardTitle>
-                            <CardDescription className="text-sm text-muted-foreground">
+                            <Separator/>
+                            <CardDescription className="text-sm text-muted-foreground px-6">
                                 {f.desc}
                             </CardDescription>
                         </div>

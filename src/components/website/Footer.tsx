@@ -1,6 +1,6 @@
 export function Footer() {
     return (
-        <footer className="pt-10 bg-background pb-1">
+        <footer className="pt-15 bg-background pb-4">
             <div className="w-full px-4 text-center text-xs sm:text-sm text-muted-foreground">
                 Built by{" "}
                 <a
