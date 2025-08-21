@@ -48,8 +48,7 @@ const Navbar = () => {
                     <NavLink
                         key={path}
                         to={path}
-                        // eslint-disable-next-line @typescript-eslint/no-unused-vars
-                        className={({ isActive }) => ""}
+                        className={() => ""}
                     >
                         {({ isActive }) => (
                             <Button
