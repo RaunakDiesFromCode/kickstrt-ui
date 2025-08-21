@@ -10,7 +10,6 @@ import { useEffect, useState } from "react";
 // Import MDX docs
 import Introduction from "./docs/introduction.mdx";
 import Installation from "./docs/installation.mdx";
-import ComponentsJson from "./docs/components-json.mdx";
 import Theming from "./docs/theming.mdx";
 import DarkMode from "./docs/dark-mode.mdx";
 import CLI from "./docs/cli.mdx";
@@ -19,7 +18,6 @@ import CLI from "./docs/cli.mdx";
 const toc = [
     { name: "Introduction", path: "introduction" },
     { name: "Installation", path: "installation" },
-    { name: "components.json", path: "components-json" },
     { name: "Theming", path: "theming" },
     { name: "Dark Mode", path: "dark-mode" },
     { name: "CLI", path: "cli" },
@@ -31,31 +29,30 @@ const Docs = () => {
         { id: string; text: string; level: number }[]
     >([]);
 
-    useEffect(() => {
-        setTimeout(() => {
-            const elements = Array.from(
-                document.querySelectorAll("h2, h3")
-            ) as HTMLHeadingElement[];
+useEffect(() => {
+    setTimeout(() => {
+        const mainContent = document.querySelector("section"); // only select main content
+        if (!mainContent) return;
 
-            const newHeadings = elements.map((el) => {
-                const generatedId =
-                    el.textContent?.toLowerCase().replace(/\s+/g, "-") || "";
+        const elements = Array.from(
+            mainContent.querySelectorAll("h2, h3")
+        ) as HTMLHeadingElement[];
 
-                // If heading has no id, assign it
-                if (!el.id) {
-                    el.id = generatedId;
-                }
+        const newHeadings = elements.map((el) => {
+            const generatedId =
+                el.textContent?.toLowerCase().replace(/\s+/g, "-") || "";
+            if (!el.id) el.id = generatedId;
 
-                return {
-                    id: el.id,
-                    text: el.textContent || "",
-                    level: el.tagName === "H2" ? 2 : 3,
-                };
-            });
+            return {
+                id: el.id,
+                text: el.textContent || "",
+                level: el.tagName === "H2" ? 2 : 3,
+            };
+        });
 
-            setHeadings(newHeadings);
-        }, 100);
-    }, [location]);
+        setHeadings(newHeadings);
+    }, 100);
+}, [location]);
 
 
     return (
@@ -82,7 +79,7 @@ const Docs = () => {
             </aside>
 
             {/* Main Content */}
-            <section className="flex-1 prose dark:prose-invert max-w-none ml-64 mr-64 p-8 ">
+            <section className="flex-1 prose dark:prose-invert max-w-[60%] ml-64 mr-64 p-8">
                 <Routes>
                     <Route
                         path="/"
@@ -90,10 +87,6 @@ const Docs = () => {
                     />
                     <Route path="introduction" element={<Introduction />} />
                     <Route path="installation" element={<Installation />} />
-                    <Route
-                        path="components-json"
-                        element={<ComponentsJson />}
-                    />
                     <Route path="theming" element={<Theming />} />
                     <Route path="dark-mode" element={<DarkMode />} />
                     <Route path="cli" element={<CLI />} />
