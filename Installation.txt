@@ -1,2 +1,121 @@
-https://ui.shadcn.com/docs/installation/manual
-https://ui.shadcn.com/docs/installation/vite
+file structure :-
+    /Users/raunakmanna/Documents/Programming/React/kickstrt-ui/
+    ├─] .DS_Store (ignored)
+    ├─] .env (ignored)
+    ├── .gitignore
+    ├── Installation.txt
+    ├── LICENSE
+    ├── README.md
+    ├── cli/
+    │   └── bin/
+    │       └── kickstrt.js
+    ├─] dist/ (ignored)
+    ├── eslint.config.js
+    ├── index.html
+    ├─] node_modules/ (ignored)
+    ├── package-lock.json
+    ├── package.json
+    ├── public/
+    │   ├── robots.txt
+    │   └── vite.svg
+    ├── src/
+    │   ├── App.tsx
+    │   ├── components/
+    │   │   ├── Testing.tsx
+    │   │   ├── UI/
+    │   │   │   ├── Accordion.tsx
+    │   │   │   ├── Alert.tsx
+    │   │   │   ├── AlertDialogue.tsx
+    │   │   │   ├── Avatar.tsx
+    │   │   │   ├── Button.tsx
+    │   │   │   ├── Calendar.tsx
+    │   │   │   ├── Card.tsx
+    │   │   │   ├── Checkbox.tsx
+    │   │   │   ├── Command.tsx
+    │   │   │   ├── ContextMenu.tsx
+    │   │   │   ├── Dialog.tsx
+    │   │   │   ├── HoverCard.tsx
+    │   │   │   ├── Input.tsx
+    │   │   │   ├── InputOTP.tsx
+    │   │   │   ├── Label.tsx
+    │   │   │   ├── Popover.tsx
+    │   │   │   ├── Progress.tsx
+    │   │   │   ├── RadioGroup.tsx
+    │   │   │   ├── ScrollArea.tsx
+    │   │   │   ├── Select.tsx
+    │   │   │   ├── Seperator.tsx
+    │   │   │   ├── Skeleton.tsx
+    │   │   │   ├── Sonner.tsx
+    │   │   │   ├── Switch.tsx
+    │   │   │   ├── TextArea.tsx
+    │   │   │   ├── ThemeToggle.tsx
+    │   │   │   ├── Toggle.tsx
+    │   │   │   └── Tooltip.tsx
+    │   │   ├── dev/
+    │   │   │   ├── AccordionShowcase.tsx
+    │   │   │   ├── AlertDialogueShowcase.tsx
+    │   │   │   ├── AlertShowcase.tsx
+    │   │   │   ├── ButtonShowcase.tsx
+    │   │   │   ├── CalendarShowcase.tsx
+    │   │   │   ├── CardShowcase.tsx
+    │   │   │   ├── CheckboxShowcase.tsx
+    │   │   │   ├── ContextMenuShowcase.tsx
+    │   │   │   ├── HoverCardShowcase.tsx
+    │   │   │   ├── InputOTPShowcase.tsx
+    │   │   │   ├── InputShowcase.tsx
+    │   │   │   ├── LabelShowcase.tsx
+    │   │   │   ├── ProgressShowcase.tsx
+    │   │   │   ├── RadioGroupShowcase.tsx
+    │   │   │   ├── ScrollAreaShowcase.tsx
+    │   │   │   ├── SelectShowcase.tsx
+    │   │   │   ├── SeperatorShowcase.tsx
+    │   │   │   ├── SkeletonShowcase.tsx
+    │   │   │   ├── SonnerShowcase.tsx
+    │   │   │   ├── TextAreaShowcase.tsx
+    │   │   │   ├── ToggleShowcase.tsx
+    │   │   │   └── TooltipShowcase.tsx
+    │   │   ├── theme-provider.tsx
+    │   │   └── website/
+    │   │       ├── CodeBlock.tsx
+    │   │       ├── Docs.tsx
+    │   │       ├── DocsLayout.jsx
+    │   │       ├── Footer.tsx
+    │   │       ├── Navbar.tsx
+    │   │       ├── UI.tsx
+    │   │       └── docs/
+    │   │           ├── cli.mdx
+    │   │           ├── dark-mode.mdx
+    │   │           ├── installation.mdx
+    │   │           ├── introduction.mdx
+    │   │           └── theming.mdx
+    │   ├── index.css
+    │   ├── lib/
+    │   │   ├── componentMap.ts
+    │   │   ├── kickstrtLogic.ts
+    │   │   └── utils.ts
+    │   ├── main.tsx
+    │   └── vite-env.d.ts
+    ├── tsconfig.app.json
+    ├── tsconfig.json
+    ├── tsconfig.node.json
+    └── vite.config.ts
+
+
+IMPORTANT
+ - this componet library only works for react+vite+tailwind
+ - package should install if its not in packages.json else skip
+ - create folders if not present
+
+procedures :-
+    npx kickstrt init
+        - installs clsx, tailwind-merge, lucide-react
+        - copies src/index.css and src/lib/utils.ts from this directory (in github) and to the directory user is installing it on in the same order replacing if necessary
+
+    npx kickstrt init theme
+        - check if Button is installed. if not install it.
+        - copies src/components/theme-provider.tsx from this directory (in github) and to the directory user is installing it on in the same order replacing if necessary
+        - copies src/components/UI/ThemeToggle.tsx from this directory (in github) and to the directory user is installing it on in the same order replacing if necessary
+
+    npx kickstrt add <components>
+        - check src/lib/componentMap.ts for the component's requirments and path from where it should be taken from this repo and installed on the user's.
+        - package should install if its not in packages.json else skip

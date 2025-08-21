@@ -3,7 +3,7 @@ import {
     coldarkDark,
     coldarkCold,
 } from "react-syntax-highlighter/dist/esm/styles/prism";
-import { useTheme } from "../theme-provider";
+import { useTheme } from "../UI/theme-provider";
 import { useState } from "react";
 import { Copy, Check } from "lucide-react";
 
