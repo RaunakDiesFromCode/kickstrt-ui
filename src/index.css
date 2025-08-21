@@ -10,6 +10,13 @@ main {
   @apply bg-background min-h-screen;
 }
 
+html,
+body {
+  overscroll-behavior: none;
+  touch-action: none;
+  /* optional: disables touch gestures */
+}
+
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
