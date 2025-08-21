@@ -1,17 +1,18 @@
 import DocsLayout from "./DocsLayout";
+import CodeBlock from "../CodeBlock";
 
 export const meta = {
-    title: "Dark mode",
-    description:
-        "Adding dark mode to your vite app",
+  title: "Dark mode",
+  description: "Adding dark mode to your Vite app",
 };
 
-<DocsLayout title={meta.title} description={meta.description}>
+export default function DarkModePage() {
+  return (
+    <DocsLayout title={meta.title} description={meta.description}>
+      <h2>Create a theme provider</h2>
 
-## Create a theme provider
-
-```tsx title="components/theme-provider.tsx"
-import { createContext, useContext, useEffect, useState } from "react";
+      <CodeBlock language="tsx">
+        {`import { createContext, useContext, useEffect, useState } from "react";
 
 type Theme = "dark" | "light" | "system";
 
@@ -84,15 +85,15 @@ export const useTheme = () => {
         throw new Error("useTheme must be used within a ThemeProvider");
 
     return context;
-};
-```
+};`}
+      </CodeBlock>
 
-## Wrap your root layout
+      <h2>Wrap your root layout</h2>
 
-Add the `ThemeProvider` to your root layout.
+      <p>Add the <code>ThemeProvider</code> to your root layout.</p>
 
-```tsx {1,5-7} title="App.tsx"
-import { ThemeProvider } from "@/components/theme-provider";
+      <CodeBlock language="tsx">
+        {`import { ThemeProvider } from "@/components/theme-provider";
 
 function App() {
     return (
@@ -102,15 +103,15 @@ function App() {
     );
 }
 
-export default App;
-```
+export default App;`}
+      </CodeBlock>
 
-## Add a mode toggle
+      <h2>Add a mode toggle</h2>
 
-Place a mode toggle on your site to toggle between light and dark mode.
+      <p>Place a mode toggle on your site to switch between light and dark mode.</p>
 
-```tsx title="components/mode-toggle.tsx"
-import { Moon, Sun } from "lucide-react";
+      <CodeBlock language="tsx">
+        {`import { Moon, Sun } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 import {
@@ -146,7 +147,8 @@ export function ModeToggle() {
             </DropdownMenuContent>
         </DropdownMenu>
     );
+}`}
+      </CodeBlock>
+    </DocsLayout>
+  );
 }
-```
-
-</DocsLayout>

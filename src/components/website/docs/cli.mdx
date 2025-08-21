@@ -1,26 +1,27 @@
 import DocsLayout from "./DocsLayout";
+import CodeBlock from "../CodeBlock";
 
 export const meta = {
-    title: "shadcn",
-    description:
-        "Use the shadcn CLI to add components to your project.",
+  title: "shadcn",
+  description: "Use the shadcn CLI to add components to your project.",
 };
 
-<DocsLayout title={meta.title} description={meta.description}>
-## init
+export default function ShadcnCLIPage() {
+  return (
+    <DocsLayout title={meta.title} description={meta.description}>
+      <h2>init</h2>
 
-Use the `init` command to initialize configuration and dependencies for a new project.
+      <p>
+        Use the <code>init</code> command to initialize configuration and
+        dependencies for a new project. It installs dependencies, adds the{" "}
+        <code>cn</code> util, and configures CSS variables.
+      </p>
 
-The `init` command installs dependencies, adds the `cn` util and configures CSS variables for the project.
+      <CodeBlock language="bash">{`npx shadcn@latest init`}</CodeBlock>
 
-```bash
-npx shadcn@latest init
-```
+      <h3>Init Options</h3>
 
-### Init Options
-
-```bash
-Usage: shadcn init [options] [components...]
+      <CodeBlock language="bash">{`Usage: shadcn init [options] [components...]
 
 initialize your project and install dependencies
 
@@ -38,21 +39,20 @@ Options:
   --no-src-dir                   do not use the src directory when creating a new project.
   --css-variables                use css variables for theming. (default: true)
   --no-css-variables             do not use css variables for theming.
-  -h, --help                     display help for command
-```
+  -h, --help                     display help for command`}</CodeBlock>
 
-## add
+      <h2>add</h2>
 
-Use the `add` command to add components and dependencies to your project.
+      <p>
+        Use the <code>add</code> command to add components and dependencies to
+        your project.
+      </p>
 
-```bash
-npx shadcn@latest add [component]
-```
+      <CodeBlock language="bash">{`npx shadcn@latest add [component]`}</CodeBlock>
 
-### Add Options
+      <h3>Add Options</h3>
 
-```bash
-Usage: shadcn add [options] [components...]
+      <CodeBlock language="bash">{`Usage: shadcn add [options] [components...]
 
 add a component to your project
 
@@ -70,23 +70,21 @@ Options:
   --no-src-dir        do not use the src directory when creating a new project.
   --css-variables     use css variables for theming. (default: true)
   --no-css-variables  do not use css variables for theming.
-  -h, --help          display help for command
-```
+  -h, --help          display help for command`}</CodeBlock>
 
-## build
+      <h2>build</h2>
 
-Use the `build` command to generate the registry JSON files.
+      <p>
+        Use the <code>build</code> command to generate the registry JSON files.
+        This reads the <code>registry.json</code> file and generates JSON files
+        in <code>public/r</code>.
+      </p>
 
-```bash
-npx shadcn@latest build
-```
+      <CodeBlock language="bash">{`npx shadcn@latest build`}</CodeBlock>
 
-This command reads the `registry.json` file and generates the registry JSON files in the `public/r` directory.
+      <h3>Build Options</h3>
 
-### Build Options
-
-```bash
-Usage: shadcn build [options] [registry]
+      <CodeBlock language="bash">{`Usage: shadcn build [options] [registry]
 
 build components for a shadcn registry
 
@@ -96,12 +94,11 @@ Arguments:
 Options:
   -o, --output <path>  destination directory for json files (default: "./public/r")
   -c, --cwd <cwd>      the working directory. defaults to the current directory.
-  -h, --help           display help for command
-```
+  -h, --help           display help for command`}</CodeBlock>
 
-To customize the output directory, use the `--output` option.
+      <p>To customize the output directory:</p>
 
-```bash
-npx shadcn@latest build --output ./public/registry
-```
-</DocsLayout>
+      <CodeBlock language="bash">{`npx shadcn@latest build --output ./public/registry`}</CodeBlock>
+    </DocsLayout>
+  );
+}
