@@ -12,7 +12,6 @@ import ReactGA from "react-ga4";
 import Navbar from "./components/website/Navbar";
 import { Footer } from "./components/website/Footer";
 import Testing from "./Testing";
-import ReactLenis from "lenis/react";
 
 const googleAnalID = import.meta.env.VITE_GOOGLE_ANAL;
 
@@ -36,27 +35,19 @@ const AnalyticsTracker = () => {
 
 const App = () => {
     return (
-        <ReactLenis
-            root
-            className="relative w-screen min-h-screen overflow-x-auto"
-        >
-            <Router>
-                <AnalyticsTracker />
-                <Navbar /> {/* ✅ Now inside Router */}
-                <main className="pt-10 min-h-screen text-foreground mt-10 px-10">
-                    <Routes>
-                        <Route
-                            path="/"
-                            element={<Navigate to="/UI" replace />}
-                        />
-                        <Route path="/UI" element={<UI />} />
-                        <Route path="/docs" element={<Docs />} />
-                        <Route path="/demonstration" element={<Testing />} />
-                    </Routes>
-                </main>
-                <Footer />
-            </Router>
-        </ReactLenis>
+        <Router>
+            <AnalyticsTracker />
+            <Navbar /> {/* ✅ Now inside Router */}
+            <main className="pt-10 min-h-screen text-foreground mt-10 px-10">
+                <Routes>
+                    <Route path="/" element={<Navigate to="/UI" replace />} />
+                    <Route path="/UI" element={<UI />} />
+                    <Route path="/docs" element={<Docs />} />
+                    <Route path="/demonstration" element={<Testing />} />
+                </Routes>
+            </main>
+            <Footer />
+        </Router>
     );
 };
 
