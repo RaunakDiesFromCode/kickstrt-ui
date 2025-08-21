@@ -70,7 +70,7 @@ const UI = () => {
                 <div className="flex justify-center gap-4 mt-8">
                     <Link to={"/docs"}>
                         <Button
-                            className="bg-gradient-to-r from-teal-400 to-cyan-400 text-white px-6 py-3 shadow-lg hover:scale-105 transition-transform"
+                            className="bg-gradient-to-r from-teal-400 to-cyan-400 text-white px-6 py-3 shadow-lg hover:scale-105 transition-all border border-foreground/30"
                             onClick={handleGetStartedClick}
                         >
                             Let&apos;s Go &gt;

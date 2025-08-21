@@ -17,6 +17,14 @@ export default defineConfig({
         },
     },
     build: {
-        chunkSizeWarningLimit: 1000, // helps control JS bundle size
+        target: "esnext", // don’t ship legacy JS
+        rollupOptions: {
+            output: {
+                manualChunks: {
+                    react: ["react", "react-dom"],
+                    vendor: ["lucide-react"],
+                },
+            },
+        },
     },
 });
