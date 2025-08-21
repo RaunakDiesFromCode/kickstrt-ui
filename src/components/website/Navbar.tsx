@@ -54,7 +54,7 @@ const Navbar = () => {
                             <Button
                                 variant="ghost"
                                 className={`px-2 py-1 cursor-pointer ${
-                                    isActive ? "bg-accent" : ""
+                                    isActive ? "underline underline-offset-3" : ""
                                 }`}
                             >
                                 {label}

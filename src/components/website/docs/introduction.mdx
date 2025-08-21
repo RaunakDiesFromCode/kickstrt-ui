@@ -3,49 +3,49 @@ import DocsLayout from "./DocsLayout";
 
 export const meta = {
   title: "Introduction",
-  description: "shadcn/ui is a set of beautifully-designed, accessible components and a code distribution platform. Works with your favorite frameworks and AI models. Open Source. Open Code.",
+  description: "Kickstrt UI is a lightweight, developer-first React + TypeScript component library. Built with Vite for speed, customizable for your design system, and fully open-source.",
 };
 
 <DocsLayout title={meta.title} description={meta.description}>
-**This is not a component library. It is how you build your component library.**
+**Kickstrt UI is not just a component library — it’s how you build your UI your way.**
 
-You know how most traditional component libraries work: you install a package from NPM, import the components, and use them in your app.
+Most component libraries work like this: you install a package, import the components, and use them. This works fine until you need to:
 
-This approach works well until you need to customize a component to fit your design system or require one that isn’t included in the library. **Often, you end up wrapping library components, writing workarounds to override styles, or mixing components from different libraries with incompatible APIs.**
+- Adapt a component to match your design system
+- Change styles beyond simple color adjustments
+- Introduce a component that isn’t included
 
-This is what shadcn/ui aims to solve. It is built around the following principles:
+Often, developers end up wrapping components, writing style overrides, or juggling multiple libraries with inconsistent APIs. Kickstrt UI solves this by giving you full control over your components while keeping development fast and modular.
 
-- **Open Code:** The top layer of your component code is open for modification.
-- **Composition:** Every component uses a common, composable interface, making them predictable.
-- **Distribution:** A flat-file schema and command-line tool make it easy to distribute components.
-- **Beautiful Defaults:** Carefully chosen default styles, so you get great design out-of-the-box.
-- **AI-Ready:** Open code for LLMs to read, understand, and improve.
+Kickstrt UI is built around these core principles:
+
+- **Open Code:** Full access to the component code for complete control.
+- **Composition:** Predictable, composable interfaces for every component.
+- **Customizable Styles:** Beyond colors, tweak spacing, typography, or any design token.
+- **Beautiful Defaults:** Ready-to-use components that look great out-of-the-box.
+- **Developer-First:** Includes dev showcases for quick prototyping and testing.
 
 ## Open Code
 
-shadcn/ui hands you the actual component code. You have full control to customize and extend the components to your needs. This means:
+Kickstrt UI gives you the actual component code. You can modify or extend anything to fit your needs. This approach ensures:
 
-- **Full Transparency:** You see exactly how each component is built.
-- **Easy Customization:** Modify any part of a component to fit your design and functionality requirements.
-- **AI Integration:** Access to the code makes it straightforward for LLMs to read, understand, and even improve your components.
+- **Transparency:** You see exactly how each component is built.
+- **Easy Customization:** Adjust styles, behavior, or functionality directly.
+- **AI-Friendly:** Open code that LLMs can read, understand, and even enhance.
 
-_In a typical library, if you need to change a button’s behavior, you have to override styles or wrap the component. With shadcn/ui, you simply edit the button code directly._
+_Typical libraries require wrapping or overriding for minor changes. With Kickstrt UI, you just edit the component directly._
 
 <Accordion collapsible>
   <AccordionItem value="faq-1" className="border-none">
     <AccordionTrigger>
-      How do I pull upstream updates in an Open Code approach?
+      How do I pull upstream updates while using Open Code?
     </AccordionTrigger>
     <AccordionContent>
       <p>
-        shadcn/ui follows a headless component architecture. This means the core
-        of your app can receive fixes by updating your dependencies, for
-        instance, radix-ui or input-otp.
+        Kickstrt UI uses a modular, headless architecture. Core dependencies can be updated separately while your top-layer code remains fully customizable.
       </p>
       <p className="mt-4">
-        The topmost layer, i.e., the one closest to your design system, is not
-        coupled with the implementation of the library. It stays open for
-        modification.
+        The topmost layer of each component is independent, letting you integrate updates without losing your design-specific modifications.
       </p>
     </AccordionContent>
   </AccordionItem>
@@ -53,31 +53,33 @@ _In a typical library, if you need to change a button’s behavior, you have to 
 
 ## Composition
 
-Every component in shadcn/ui shares a common, composable interface. **If a component does not exist, we bring it in, make it composable, and adjust its style to match and work with the rest of the design system.**
+Every Kickstrt UI component shares a predictable, composable interface. Missing a component? Add it, make it composable, and integrate it seamlessly with your design system.
 
-_A shared, composable interface means it's predictable for both your team and LLMs. You are not learning different APIs for every new component. Even for third-party ones._
+_A consistent API means your team and AI tools don’t have to relearn a new interface for every component._
 
-## Distribution
+## Customizable Styles
 
-shadcn/ui is also a code distribution system. It defines a schema for components and a CLI to distribute them.
+Kickstrt UI lets you go beyond color changes. Modify spacing, typography, shadows, or any design token directly in the component code:
 
-- **Schema:** A flat-file structure that defines the components, their dependencies, and properties.
-- **CLI:** A command-line tool to distribute and install components across projects with cross-framework support.
-
-_You can use the schema to distribute your components to other projects or have AI generate completely new components based on existing schema._
+- **Fine-Grained Control:** Tailor every aspect of your UI without hacks.
+- **Reusable Design System:** Changes propagate consistently across all components.
+- **Rapid Iteration:** Experiment in dev showcases before committing to production.
 
 ## Beautiful Defaults
 
-shadcn/ui comes with a large collection of components that have carefully chosen default styles. They are designed to look good on their own and to work well together as a consistent system:
+Kickstrt UI comes with thoughtfully-designed default styles, so your UI looks clean and polished immediately:
 
-- **Good Out-of-the-Box:** Your UI has a clean and minimal look without extra work.
-- **Unified Design:** Components naturally fit with one another. Each component is built to match the others, keeping your UI consistent.
-- **Easily Customizable:** If you want to change something, it's simple to override and extend the defaults.
+- **Out-of-the-Box:** Ready-to-use components that just work.
+- **Unified Design:** Components naturally fit together.
+- **Easy Overrides:** Default styles can be extended or replaced entirely.
 
-## AI-Ready
+## Developer-First
 
-The design of shadcn/ui makes it easy for AI tools to work with your code. Its open code and consistent API allow AI models to read, understand, and even generate new components.
+Kickstrt UI includes showcases for every component, letting you:
 
-_An AI model can learn how your components work and suggest improvements or even create new components that integrate with your existing design._
+- Quickly prototype and test features
+- Explore component APIs interactively
+- Experiment with style customizations in a live environment
 
+_Kickstrt UI empowers developers to build, iterate, and scale UI components with speed and precision._
 </DocsLayout>
