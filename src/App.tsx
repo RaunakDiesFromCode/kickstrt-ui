@@ -11,7 +11,7 @@ import Docs from "./components/website/Docs";
 import ReactGA from "react-ga4";
 import Navbar from "./components/website/Navbar";
 import { Footer } from "./components/website/Footer";
-import Testing from "./Testing";
+import Testing from "./components/Testing";
 
 const googleAnalID = import.meta.env.VITE_GOOGLE_ANAL;
 
